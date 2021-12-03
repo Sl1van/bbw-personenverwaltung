@@ -1,4 +1,4 @@
-package ch.bbw;
+package ch.bbw.personenverwaltung;
 
 import io.quarkus.test.junit.NativeImageTest;
 

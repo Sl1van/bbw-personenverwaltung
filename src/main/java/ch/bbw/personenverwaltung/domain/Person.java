@@ -1,4 +1,4 @@
-package ch.bbw.domain;
+package ch.bbw.personenverwaltung.domain;
 
 
 import javax.persistence.*;
