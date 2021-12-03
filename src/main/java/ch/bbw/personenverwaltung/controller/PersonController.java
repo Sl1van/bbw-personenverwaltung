@@ -15,23 +15,9 @@ public class PersonController {
     private PersonService personService;
 
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String hello() {
-        return "Hello RESTEasy";
-    }
-
-
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    @Path("/all")
-    public List<Person> listAll() {
-        return personService.findAll();
-    }
-
-    @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Person> list() {
-        return personService.findPerson();
+        return personService.findAll();
     }
 
     @POST

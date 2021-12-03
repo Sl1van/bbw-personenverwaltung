@@ -17,7 +17,6 @@ public class PersonService {
 
     @Transactional
     public Person createPerson(Person entry) {
-        Person userCalling = entityManager.find(Person.class);
         entityManager.persist(entry);
         return entry;
     }
@@ -28,7 +27,7 @@ public class PersonService {
     }
 
     public List<Person> findPerson(long id) {
-        TypedQuery<Person> query = entityManager.createQuery("FROM Person where user_id= ?1", Person.class);
+        TypedQuery<Person> query = entityManager.createQuery("FROM Person where id= ?1", Person.class);
         return query.setParameter(1, id).getResultList();
     }
 
