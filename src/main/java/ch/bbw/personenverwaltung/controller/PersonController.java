@@ -35,7 +35,7 @@ public class PersonController {
         personService.deletePerson(id);
     }
 
-    @PUT
+    @PATCH
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("/{id}")
